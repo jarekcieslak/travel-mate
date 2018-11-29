@@ -1,0 +1,25 @@
+<mat-card class="card fadeIn"
+          [routerLink]="['tours', index]"
+          [matBadge]="tour.isSpecialOffer? 'special offer': null" matBadgePosition="above after" matBadgeColor="accent"
+          [class.mat-elevation-z24]="isElevated"
+          [class.show]="isElevated"
+          (mouseover)="elevate(true)"
+          (mouseout)="elevate(false)">
+  <mat-card-header>
+    <div mat-card-avatar class="card__icon" [style.backgroundImage]="'url(\'assets/'+ (index+1) + '.jpg\')'"></div>
+    <mat-card-title>{{tour.title}}</mat-card-title>
+    <mat-card-subtitle><span>Rating: {{tour.rating}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-right">Price: {{tour.price}}{{tour.currency}}</span>
+    </mat-card-subtitle>
+
+
+  </mat-card-header>
+  <img class="card__image" mat-card-image [src]="'assets/'+ (index+1) + '.jpg'" alt="Activity photo">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="card__cta text-center">
+    <button mat-stroked-button color="primary" [routerLink]="['tours', index]">See more details</button>
+  </mat-card-actions>
+</mat-card>

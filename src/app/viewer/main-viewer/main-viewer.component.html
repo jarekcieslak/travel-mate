@@ -1,0 +1,20 @@
+<section class="jumbotron text-center city-wallpaper">
+  <div class="container-fluid">
+    <h1 class="jumbotron-heading mat-display-3">Looking for cool things to do in <strong>Berlin</strong>?</h1>
+    <app-search (handleSearch)="handleSearch($event)"></app-search>
+  </div>
+</section>
+
+
+<div class="container cards">
+  <div class="row">
+
+    <div class="col-md-12 cards__count" *ngIf="activities?.tours.length"><p class="mat-h3 text-center">We've found
+      <strong>{{activities?.tours.length}} activities</strong> matching your criteria. Have a look! 😀</p></div>
+    <div class="col-md-12 cards__count" *ngIf="!activities?.tours.length"><p class="mat-h3 text-center">We haven't found
+      any activities matching your criteria 🙄 Try changing the filter.</p></div>
+    <div class="col-md-4" *ngFor="let tour of activities?.tours; let index = index">
+      <app-card [index]="index" [tour]="tour"></app-card>
+    </div>
+  </div>
+</div>

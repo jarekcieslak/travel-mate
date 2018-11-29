@@ -1,0 +1,7 @@
+<div class="container__item">
+  <form (submit)="search(this.searchText)">
+    <input name="search-input" [(ngModel)]="searchText" type="text" class="form__field" placeholder="museum?"/>
+    <button type="submit" (click)="search(this.searchText)" mat-flat-button color="primary">Search</button>
+  </form>
+</div>
+

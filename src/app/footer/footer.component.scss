@@ -1,0 +1,8 @@
+@import '../../resass';
+
+.brand {
+  display: none;
+  @include r(480) {
+    display: flex;
+  }
+}

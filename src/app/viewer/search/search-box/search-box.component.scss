@@ -1,0 +1,44 @@
+//** variables
+@import '../../../../resass';
+
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #3a3a3a;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+button {
+  height: 67px;
+}
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $button-bg-color;
+  }
+}
+
+//** form
+.form {
+  &__field {
+    @include r(480) {
+      width: 360px;
+    }
+    width: 180px;
+    background: #fff;
+    color: $input-text-color;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 12px 18px;
+    border: 1px solid #c3c3c3;
+  }
+}

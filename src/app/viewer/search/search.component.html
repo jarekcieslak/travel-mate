@@ -1,0 +1,41 @@
+<div class="lead">
+  <app-search-box (handleSearch)="search($event)"></app-search-box>
+</div>
+<p *ngIf="!filtersVisible">
+  <button (click)="toggleFilters(true)" mat-button color="primary">See more filters</button>
+</p>
+
+
+<div class="container" *ngIf="filtersVisible">
+  <div class="row">
+    <div class="col">
+      <button class="text-muted" (click)="toggleFilters(false)" mat-button>Hide filters</button>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col">
+      <button mat-button color="primary" (click)="toggleFiltering('price');search()">
+        <span class="filter__title" [class.font-weight-bold]="filters.sortByPrice">Sort by Price</span>
+        <mat-icon *ngIf="filters.sortByPrice === 1">trending_up</mat-icon>
+        <mat-icon *ngIf="filters.sortByPrice === 2">trending_down</mat-icon>
+      </button>
+    </div>
+
+    <div class="col filter">
+      <button mat-button color="primary" (click)="toggleFiltering('rating');search()">
+        <span class="filter__title" [class.font-weight-bold]="filters.sortByRating">Sort by Rating</span>
+        <mat-icon *ngIf="filters.sortByRating === 1">trending_up</mat-icon>
+        <mat-icon *ngIf="filters.sortByRating === 2">trending_down</mat-icon>
+      </button>
+    </div>
+    <div class="col filter">
+      <button mat-button color="primary" (click)="toggleFiltering('special'); search()">
+        <span class="filter__title" [class.font-weight-bold]="filters.onlySpecial">Only special offers</span>
+        <mat-icon *ngIf="filters.onlySpecial">done</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+</div>

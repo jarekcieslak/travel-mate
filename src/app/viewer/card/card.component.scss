@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.card {
+  margin-bottom: 30px;
+  visibility: hidden;
+
+  &__image {
+    background-size: cover;
+    background-color: #c3c3c3;
+    height: 196px;
+  }
+
+  &__icon {
+    background-size: cover;
+  }
+
+  &__cta {
+    button {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
+    .mat-button-wrapper {
+    }
+  }
+}
+
+
+.mat-badge-medium .mat-badge-content {
+  width: 120px;
+  border-radius: 3px;
+}
