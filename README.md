@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
-####About the app:
+###About the app:
 It's basically the same content which you see after going to: http://localhost:4200/about. Application was developed using following libraries:
 * Angular7
 * Bootstrap
@@ -10,7 +10,7 @@ It's basically the same content which you see after going to: http://localhost:4
 
 I chose angular because most of my experience comes from Angular projects, but actually any other library (React / Vue) would be perfectly fine here. I also decided to include bootstrap and angular material to provide some basic styles, grid and typical components. Feature scope was pretty small so I decided not to use any additional state management libraries like redux/ngrx.
 
-####Features:
+###Features:
 User can see a default list of activities in Berlin
 * It's possible to do text search on titles of activites
 * More filters are available after clicking 'more filters'. It's possible to sort using price, rating and select only special offers
@@ -18,7 +18,7 @@ User can see a default list of activities in Berlin
 * I grabbed pictures of Berlin from https://source.unsplash.com/
 
 
-####Assumptions:
+###Assumptions:
 * App is using inline dummy activity data as a source
 * Only optimize for mobile screen sizes, but tablet and desktop layouts are also supported
 * No branding, header, or footer content necessary.
